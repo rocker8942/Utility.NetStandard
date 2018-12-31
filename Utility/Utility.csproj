@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageId>Moneystock.Utility.GeneralPurpose.NetStandard</PackageId>
+    <Authors>Joe Park</Authors>
+    <Product />
+    <Company />
+    <Description>C# Utility for general purpose compatible with .netstandard</Description>
+    <PackageTags>C# Utility .NetStandard</PackageTags>
+    <PackageReleaseNotes>Conversino of Moneystock.Utility.GeneralPurpose to compatible with .netstandard</PackageReleaseNotes>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <Copyright></Copyright>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LumenWorksCsvReader" Version="4.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.8.4" />
+    <PackageReference Include="SharpZipLib" Version="1.1.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
+    <PackageReference Include="WinSCP" Version="5.14.2-beta" />
+  </ItemGroup>
+
+</Project>
