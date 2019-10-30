@@ -1,0 +1,9 @@
+F:\SourceCode\Git\Utility.Standard\Utility.FTP\bin\Debug\netstandard2.0\Utility.FTP.deps.json
+F:\SourceCode\Git\Utility.Standard\Utility.FTP\bin\Debug\netstandard2.0\Utility.FTP.dll
+F:\SourceCode\Git\Utility.Standard\Utility.FTP\obj\Debug\netstandard2.0\Utility.FTP.csprojAssemblyReference.cache
+F:\SourceCode\Git\Utility.Standard\Utility.FTP\obj\Debug\netstandard2.0\Utility.FTP.AssemblyInfoInputs.cache
+F:\SourceCode\Git\Utility.Standard\Utility.FTP\obj\Debug\netstandard2.0\Utility.FTP.AssemblyInfo.cs
+F:\SourceCode\Git\Utility.Standard\Utility.FTP\bin\Debug\netstandard2.0\WinSCP.exe
+F:\SourceCode\Git\Utility.Standard\Utility.FTP\bin\Debug\netstandard2.0\Utility.FTP.pdb
+F:\SourceCode\Git\Utility.Standard\Utility.FTP\obj\Debug\netstandard2.0\Utility.FTP.dll
+F:\SourceCode\Git\Utility.Standard\Utility.FTP\obj\Debug\netstandard2.0\Utility.FTP.pdb

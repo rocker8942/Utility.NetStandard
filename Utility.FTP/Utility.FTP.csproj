@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Joe Park</Authors>
+    <Company>Joe Park</Company>
+    <Description>C# helper on WinSCP.Net</Description>
+    <Copyright>MIT</Copyright>
+    <PackageTags>C# Utility .NetStandard</PackageTags>
+    <PackageId>Moneystock.Utility.FTP.NetStandard</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WinSCP" Version="5.15.5" />
+  </ItemGroup>
+
+</Project>
