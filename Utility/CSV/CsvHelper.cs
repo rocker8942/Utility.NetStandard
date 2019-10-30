@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
 using LumenWorks.Framework.IO.Csv;
-using Utility.Model;
 
 namespace Utility.CSV
 {
@@ -17,7 +15,6 @@ namespace Utility.CSV
     {
         private const char Separator = ',';
         private const char Qualifier = '"';
-        public readonly List<ParseResponse> ParseErrors;
 
         public string CsvFile { get; }
         public DataTable CsvTable { get; set; }
@@ -51,35 +48,21 @@ namespace Utility.CSV
         {
             CsvFile = csvFile;
             CsvTable = new DataTable();
-            ParseErrors = new List<ParseResponse>();
         }
 
         /// <summary>
-        ///     write the datatable content into a csv file at the specified location.
+        ///     write the data table content into a csv file at the specified location.
         /// </summary>
         /// <param name="csvLocation">csv file output location</param>
         /// <param name="hasHeader"></param>
-        public void Write(string csvLocation, bool hasHeader)
+        /// <param name="encoding"></param>
+        public void Write(string csvLocation, bool hasHeader, Encoding encoding = null)
         {
+            if (encoding == null)
+                encoding = Encoding.UTF8;
+
             if (CsvTable != null)
                 Write(CsvTable.CreateDataReader(), csvLocation, ColumnList, hasHeader);
-        }
-
-        public void Append(string csvLocation)
-        {
-            if (CsvTable != null)
-                Append(CsvTable.CreateDataReader(), csvLocation, ColumnList);
-        }
-
-        /// <summary>
-        ///     write the datatable content into a csv file at the specified location.
-        /// </summary>
-        /// <param name="csvLocation">csv file output location</param>
-        /// <param name="encoding"></param>
-        public void Write(string csvLocation, Encoding encoding)
-        {
-            if (CsvTable != null)
-                Write(CsvTable.CreateDataReader(), csvLocation, ColumnList, encoding);
         }
 
         /// <summary>
@@ -88,19 +71,12 @@ namespace Utility.CSV
         /// <param name="r">data reader</param>
         /// <param name="csvLocation">outpur csv location</param>
         /// <param name="columns">output columns</param>
-        public void Write(IDataReader r, string csvLocation, Collection<string> columns)
+        public void Write(IDataReader r, string csvLocation, Collection<string> columns, bool includeHeaders = true, Encoding encoding = null)
         {
-            File.WriteAllText(csvLocation, GetCsvRawData(r, columns, true));
-        }
+            if (encoding == null)
+                encoding = Encoding.UTF8;
 
-        private void Write(IDataReader r, string csvLocation, Collection<string> columns, Encoding encoding)
-        {
-            File.WriteAllText(csvLocation, GetCsvRawData(r, columns, true), encoding);
-        }
-
-        private void Write(IDataReader r, string csvLocation, Collection<string> columns, bool includeHeaders)
-        {
-            File.WriteAllText(csvLocation, GetCsvRawData(r, columns, includeHeaders));
+            File.WriteAllText(csvLocation, GetCsvRawData(r, columns, includeHeaders), encoding);
         }
 
         public string GetCsvData(bool includeHeaders = true)
@@ -164,18 +140,21 @@ namespace Utility.CSV
             return result;
         }
 
-        private void Append(IDataReader dataReader, string csvLocation, Collection<string> columns)
+        public void Append(string csvLocation)
         {
-            //Gets the existing data in the csv file
-            var data = File.ReadAllText(csvLocation);
-            //Add the data to string builder
-            var sb = new StringBuilder(data);
-            //Gets the data from the actual datareader
-            var dataToAppend = GetCsvRawData(dataReader, columns, false);
-            //Appends the new data to string builder
-            sb.Append(dataToAppend);
-            //Writes the file
-            File.WriteAllText(csvLocation, sb.ToString());
+            if (CsvTable != null)
+            {
+                //Gets the existing data in the csv file
+                var data = File.ReadAllText(csvLocation);
+                //Add the data to string builder
+                var sb = new StringBuilder(data);
+                //Gets the data from the actual datareader
+                var dataToAppend = GetCsvRawData(CsvTable.CreateDataReader(), ColumnList, false);
+                //Appends the new data to string builder
+                sb.Append(dataToAppend);
+                //Writes the file
+                File.WriteAllText(csvLocation, sb.ToString());
+            }
         }
 
         /// <summary>
