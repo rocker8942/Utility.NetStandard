@@ -1,18 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>Moneystock.Utility.GeneralPurpose.NetStandard</PackageId>
     <Authors>Joe Park</Authors>
     <Product />
     <Company />
     <Description>C# Utility for general purpose compatible with .netstandard</Description>
     <PackageTags>C# Utility .NetStandard</PackageTags>
-    <PackageReleaseNotes>Conversino of Moneystock.Utility.GeneralPurpose to compatible with .netstandard</PackageReleaseNotes>
+    <PackageReleaseNotes>Simplify the Email Helper</PackageReleaseNotes>
     <PackageLicenseUrl></PackageLicenseUrl>
     <Copyright></Copyright>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
