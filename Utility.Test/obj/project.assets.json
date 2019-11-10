@@ -2267,9 +2267,9 @@
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "Moneystock.Utility.FTP.NetStandard/1.0.0": {
+      "Moneystock.Utility.FTP.NetStandard/1.0.1": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "WinSCP": "5.15.5"
         },
@@ -2280,9 +2280,9 @@
           "bin/placeholder/Moneystock.Utility.FTP.NetStandard.dll": {}
         }
       },
-      "Moneystock.Utility.GeneralPurpose.NetStandard/1.0.1": {
+      "Moneystock.Utility.GeneralPurpose.NetStandard/1.0.2": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "LumenWorksCsvReader": "4.0.0",
           "Newtonsoft.Json": "12.0.1",
@@ -7536,12 +7536,12 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "Moneystock.Utility.FTP.NetStandard/1.0.0": {
+    "Moneystock.Utility.FTP.NetStandard/1.0.1": {
       "type": "project",
       "path": "../Utility.FTP/Utility.FTP.csproj",
       "msbuildProject": "../Utility.FTP/Utility.FTP.csproj"
     },
-    "Moneystock.Utility.GeneralPurpose.NetStandard/1.0.1": {
+    "Moneystock.Utility.GeneralPurpose.NetStandard/1.0.2": {
       "type": "project",
       "path": "../Utility/Utility.csproj",
       "msbuildProject": "../Utility/Utility.csproj"
@@ -7551,8 +7551,8 @@
     ".NETCoreApp,Version=v3.0": [
       "FluentAssertions >= 5.9.0",
       "Microsoft.NET.Test.Sdk >= 16.2.0",
-      "Moneystock.Utility.FTP.NetStandard >= 1.0.0",
-      "Moneystock.Utility.GeneralPurpose.NetStandard >= 1.0.1",
+      "Moneystock.Utility.FTP.NetStandard >= 1.0.1",
+      "Moneystock.Utility.GeneralPurpose.NetStandard >= 1.0.2",
       "Moq >= 4.13.1",
       "coverlet.collector >= 1.0.1",
       "xunit >= 2.4.0",
