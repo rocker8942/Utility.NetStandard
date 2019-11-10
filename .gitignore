@@ -6,3 +6,5 @@
 /Utility/bin
 /Utility/obj
 *.nupkg
+Utility.FTP/obj
+Utility.Test/obj
