@@ -1,4 +1,6 @@
-﻿namespace Utility
+﻿using System.Threading.Tasks;
+
+namespace Utility
 {
     using System;
     using System.Collections.Generic;
@@ -39,6 +41,31 @@
                     if (timeLimit == defaultTime || DateTime.Now < timeLimit)
                     {
                         return func();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    exceptions.Add(ex);
+                    Thread.Sleep(retryInterval);
+                }
+            }
+
+            throw new AggregateException(exceptions);
+        }
+
+        public static async Task<TResult> DoAsync<TResult>(Func<Task<TResult>> func, TimeSpan retryInterval, int maxRetry = 3, DateTime timeLimit = new DateTime())
+        {
+            var exceptions = new List<Exception>();
+            var defaultTime = new DateTime();
+
+            for (int retry = 0; retry < maxRetry; retry++)
+            {
+                try
+                {
+                    // if there is time limit, retry within time limit
+                    if (timeLimit == defaultTime || DateTime.Now < timeLimit)
+                    {
+                        return await func();
                     }
                 }
                 catch (Exception ex)
