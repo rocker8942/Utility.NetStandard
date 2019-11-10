@@ -5,7 +5,7 @@
   },
   "projects": {
     "F:\\SourceCode\\Git\\Utility.Standard\\Utility.FTP\\Utility.FTP.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "restore": {
         "projectUniqueName": "F:\\SourceCode\\Git\\Utility.Standard\\Utility.FTP\\Utility.FTP.csproj",
         "projectName": "Moneystock.Utility.FTP.NetStandard",
@@ -21,7 +21,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netstandard2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -29,7 +29,7 @@
           "https://rocker8942.pkgs.visualstudio.com/_packaging/UtilityNuget/nuget/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
+          "netstandard2.1": {
             "projectReferences": {}
           }
         },
@@ -40,14 +40,8 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
+        "netstandard2.1": {
           "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
-            },
             "WinSCP": {
               "target": "Package",
               "version": "[5.15.5, )"
@@ -63,6 +57,11 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
@@ -157,7 +156,7 @@
       }
     },
     "F:\\SourceCode\\Git\\Utility.Standard\\Utility\\Utility.csproj": {
-      "version": "1.0.1",
+      "version": "1.0.2",
       "restore": {
         "projectUniqueName": "F:\\SourceCode\\Git\\Utility.Standard\\Utility\\Utility.csproj",
         "projectName": "Moneystock.Utility.GeneralPurpose.NetStandard",
@@ -173,7 +172,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netstandard2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -181,7 +180,7 @@
           "https://rocker8942.pkgs.visualstudio.com/_packaging/UtilityNuget/nuget/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
+          "netstandard2.1": {
             "projectReferences": {}
           }
         },
@@ -192,17 +191,11 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
+        "netstandard2.1": {
           "dependencies": {
             "LumenWorksCsvReader": {
               "target": "Package",
               "version": "[4.0.0, )"
-            },
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -231,6 +224,11 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
