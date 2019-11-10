@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>Moneystock.Utility.GeneralPurpose.NetStandard</PackageId>
     <Authors>Joe Park</Authors>
@@ -9,11 +9,11 @@
     <Company />
     <Description>C# Utility for general purpose compatible with .netstandard</Description>
     <PackageTags>C# Utility .NetStandard</PackageTags>
-    <PackageReleaseNotes>Simplify the Email Helper</PackageReleaseNotes>
+    <PackageReleaseNotes>Add RetryAsync</PackageReleaseNotes>
     <PackageLicenseUrl></PackageLicenseUrl>
     <Copyright></Copyright>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Joe Park</Authors>
     <Company>Joe Park</Company>
@@ -9,6 +9,8 @@
     <Copyright>MIT</Copyright>
     <PackageTags>C# Utility .NetStandard</PackageTags>
     <PackageId>Moneystock.Utility.FTP.NetStandard</PackageId>
+    <Version>1.0.1</Version>
+    <PackageReleaseNotes>Upgrade to dotnet STD 2.1</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
