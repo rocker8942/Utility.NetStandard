@@ -2,7 +2,6 @@
 using System.IO;
 using System.Text;
 using Moq;
-using Utility.CSV;
 using Xunit;
 
 namespace Utility.Test.CSV
@@ -10,7 +9,7 @@ namespace Utility.Test.CSV
     public class CSVHelperTests
     {
         /// <summary>
-        /// Test CSVHelper read csv file correctly
+        ///     Test CSVHelper read csv file correctly
         /// </summary>
         [Fact]
         public void ReadCsvFastTest()
@@ -22,7 +21,7 @@ namespace Utility.Test.CSV
             using (var streamReader = new StreamReader(stream))
             {
                 // act
-                var csv = new CsvHelper("");
+                var csv = new Utility.CSV.CsvHelper("");
                 csv.ReadCsvFast(streamReader, ',', true);
 
                 // assert
