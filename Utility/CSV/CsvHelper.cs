@@ -219,40 +219,14 @@ namespace Utility.CSV
         /// <param name="hasHeader"></param>
         public void ReadCsvFast(StreamReader stream, char delimiter, bool hasHeader)
         {
-            // open the file which is a CSV file with headers
             using (var csv = new CsvReader(stream, CultureInfo.InvariantCulture))
             {
-                var fieldCount = csv.Context.ColumnCount;
-
-                // Get header
-                if (hasHeader)
+                using (var dr = new CsvDataReader(csv))
                 {
-                    csv.Read();
-                    csv.ReadHeader();
-                    var headers = csv.Context.HeaderRecord;
-                    foreach (var header in headers)
-                        if (!CsvTable.Columns.Contains(header))
-                            CsvTable.Columns.Add(header);
-                        else
-                            CsvTable.Columns.Add(header + DateTime.Now.Second);
+                    var dt = new DataTable();
+                    dt.Load(dr);
+                    CsvTable = dt;
                 }
-                else
-                {
-                    for (var i = 0; i < fieldCount; i++)
-                        CsvTable.Columns.Add(i.ToString());
-                }
-
-                // Get records
-                while (csv.Read())
-                {
-                    var row = CsvTable.NewRow();
-                    for (var i = 0; i < fieldCount; i++)
-                        row[i] = csv.GetField(i);
-
-                    CsvTable.Rows.Add(row);
-                }
-                var record = csv.Parser.Read();
-                
             }
         }
 
