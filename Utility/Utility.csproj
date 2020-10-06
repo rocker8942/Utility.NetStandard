@@ -9,12 +9,14 @@
     <Company />
     <Description>C# Utility for general purpose compatible with .netstandard</Description>
     <PackageTags>C# Utility .NetStandard</PackageTags>
-    <PackageReleaseNotes>Add RetryAsync</PackageReleaseNotes>
+    <PackageReleaseNotes>Use CSVHelper instead of Lumen CSV Reader</PackageReleaseNotes>
     <PackageLicenseUrl></PackageLicenseUrl>
-    <Copyright>MIT</Copyright>
+    <Copyright>MS-PL</Copyright>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <LangVersion>8</LangVersion>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <FileVersion>1.0.3.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
