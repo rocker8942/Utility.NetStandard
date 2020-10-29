@@ -13,6 +13,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="UuEncodedSample.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="UuEncodedSample.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.9.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Include="Moq" Version="4.13.1" />
