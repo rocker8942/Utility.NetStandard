@@ -6,9 +6,12 @@
 /Utility/bin
 /Utility/obj
 *.nupkg
-Utility.FTP/obj
-Utility.Test/obj
-/Utility.FTP/bin/Debug/netstandard2.1
-Utility.Test/bin
-Utility.FTP/bin
+/Utility.FTP/bin
+/Utility.FTP/obj/Debug
+/Utility.FTP/obj/Release
+/Utility.FTP/obj
+/Utility.Test/bin/Debug
+/Utility.Test/obj/Debug
+/Utility.Test/obj/Release/netcoreapp3.0
+/Utility.Test/obj
 /Utility.sln.DotSettings.user

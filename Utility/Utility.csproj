@@ -17,6 +17,8 @@
     <LangVersion>8</LangVersion>
     <AssemblyVersion>1.0.3.0</AssemblyVersion>
     <FileVersion>1.0.3.0</FileVersion>
+    <PackageLicenseExpression>MS-PL</PackageLicenseExpression>
+    <PackageProjectUrl>https://opensource.org/licenses/MS-PL</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
