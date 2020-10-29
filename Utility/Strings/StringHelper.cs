@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Collections.Generic;
+using System.Text;
 
 namespace Utility
 {
@@ -69,7 +70,7 @@ namespace Utility
         }
 
         /// <summary>
-        /// Get byte array with UTF8 Encoding
+        ///     Get byte array with UTF8 Encoding
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
@@ -77,6 +78,68 @@ namespace Utility
         {
             var encoding = new UTF8Encoding();
             return encoding.GetBytes(str);
+        }
+
+        /// <summary>
+        ///     Extract text between two strings.
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="startString"></param>
+        /// <param name="endString"></param>
+        /// <returns></returns>
+        public static string ExtractBetween(string text, string startString, string endString)
+        {
+            if (string.IsNullOrWhiteSpace(text))
+                return string.Empty;
+
+            var startIndex = text.IndexOf(startString) + startString.Length;
+            var endIndex = text.IndexOf(endString, startIndex);
+            var length = endIndex - startIndex;
+
+            if (startIndex >= 0 && endIndex >= startIndex)
+                return text.Substring(startIndex, length).Trim();
+            return string.Empty;
+        }
+
+        /// <summary>
+        ///     Extract text between two strings including the search strings.
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="startString"></param>
+        /// <param name="endString"></param>
+        /// <returns></returns>
+        public static string ExtractBetweenIncludeSearchString(string text, string startString, string endString)
+        {
+            if (string.IsNullOrWhiteSpace(text))
+                return string.Empty;
+
+            var startIndex = text.IndexOf(startString);
+            var endIndex = text.IndexOf(endString, startIndex) + endString.Length;
+            var length = endIndex - startIndex;
+
+            if (startIndex >= 0 && endIndex >= startIndex)
+                return text.Substring(startIndex, length).Trim();
+            return string.Empty;
+        }
+
+        /// <summary>
+        ///     Extract all occurrences of match between two strings.
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="startString"></param>
+        /// <param name="endString"></param>
+        /// <returns></returns>
+        public static IEnumerable<string> ExtractBetweenAll(string text, string startString, string endString)
+        {
+            do
+            {
+                var match = ExtractBetween(text, startString, endString);
+                if (!string.IsNullOrWhiteSpace(match))
+                {
+                    yield return match;
+                    text = text.Replace(ExtractBetweenIncludeSearchString(text, startString, endString), string.Empty);
+                }
+            } while (!string.IsNullOrWhiteSpace(ExtractBetween(text, startString, endString)));
         }
     }
 }
