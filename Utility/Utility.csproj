@@ -9,23 +9,23 @@
     <Company />
     <Description>C# Utility for general purpose compatible with .netstandard</Description>
     <PackageTags>C# Utility .NetStandard</PackageTags>
-    <PackageReleaseNotes>Use CSVHelper instead of Lumen CSV Reader</PackageReleaseNotes>
+    <PackageReleaseNotes>Upgrade dependency versioni</PackageReleaseNotes>
     <PackageLicenseUrl></PackageLicenseUrl>
     <Copyright>MS-PL</Copyright>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Version>1.0.3</Version>
+    <Version>1.0.5</Version>
     <LangVersion>8</LangVersion>
-    <AssemblyVersion>1.0.3.0</AssemblyVersion>
-    <FileVersion>1.0.3.0</FileVersion>
+    <AssemblyVersion>1.0.4.1</AssemblyVersion>
+    <FileVersion>1.0.4.1</FileVersion>
     <PackageLicenseExpression>MS-PL</PackageLicenseExpression>
     <PackageProjectUrl>https://opensource.org/licenses/MS-PL</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="CsvHelper" Version="15.0.6" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Portable.BouncyCastle" Version="1.8.4" />
-    <PackageReference Include="SharpZipLib" Version="1.1.0" />
+    <PackageReference Include="SharpZipLib" Version="1.3.3" />
     <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
   </ItemGroup>
 
