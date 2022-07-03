@@ -9,8 +9,8 @@
     <Copyright>MIT</Copyright>
     <PackageTags>C# Utility .NetStandard</PackageTags>
     <PackageId>Moneystock.Utility.FTP.NetStandard</PackageId>
-    <Version>1.0.1</Version>
-    <PackageReleaseNotes>Upgrade to dotnet STD 2.1</PackageReleaseNotes>
+    <Version>1.0.2</Version>
+    <PackageReleaseNotes>Upgrade to dotnet 6.0</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
